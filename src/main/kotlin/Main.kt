@@ -1,7 +1,13 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+data class Person(val name: String,
+                  val age: Int?=null)
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+    val persons = listOf(Person("철수"),
+    Person("영희",29))
+
+    val oldest= persons.maxByOrNull { it.age ?: 0 }
+    print("나이가 가장 많은 사람 : $oldest")
+
+
+
 }
