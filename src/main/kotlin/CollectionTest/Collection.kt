@@ -18,8 +18,4 @@ fun main(args: Array<String>)  {
     println(joinToString(strings))
     reportOpertioncount()
 
-
-
-
-
 }
